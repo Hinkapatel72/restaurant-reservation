@@ -1,0 +1,16 @@
+.landing-image {
+  min-width: 350px;
+  min-height: 350px;
+}
+.landing-form {
+  margin: auto;
+  padding: 20px;
+}
+
+.landing-heading-fontcolor {
+  color: #389c56;
+}
+
+.landing-para-fontcolor {
+  color: #5a7021;
+}
