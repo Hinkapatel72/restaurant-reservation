@@ -30,7 +30,7 @@
               "node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css",
               "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css",
               "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css",
-              "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css"  
+              "node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -128,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Restaurant-Reservation"
+    }
+  },
+  "defaultProject": "Restaurant-Reservation",
+  "cli": {
+    "analytics": false
+  }
 }

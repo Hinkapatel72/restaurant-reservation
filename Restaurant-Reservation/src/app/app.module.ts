@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BookingPageComponent } from './components/booking-page/booking-page.component';
+import { SeatingTypeComponent } from './components/seating-type/seating-type.component';
+import { CustomerDetailComponent } from './components/customer-detail/customer-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    BookingPageComponent,
+    SeatingTypeComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,

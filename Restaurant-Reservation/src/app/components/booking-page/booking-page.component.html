@@ -1,0 +1,245 @@
+<app-header> </app-header>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="offset-1 col col-md-2">
+      <form>
+        <fieldset class="form-group">
+          <legend class="booking-heading-fontcolor">Dining Options</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+              All dining Options
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+              Delivery Only
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+              Takeout Only
+            </label>
+          </div>
+        </fieldset>
+      </form>
+
+      <br><hr/>
+      <form>
+        <fieldset class="form-group">
+          <legend class="booking-heading-fontcolor">Seating Options</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" checked="">
+              Standard
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Outdoor
+            </label>
+          </div>
+        </fieldset>
+      </form>
+
+      <br><hr/>
+      <form>
+        <fieldset class="form-group">
+          <legend class="booking-heading-fontcolor">Dining Options</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4" checked="">
+              $30 and Under
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios5" value="option5">
+              $31 to $50
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios6" value="option6">
+              $50 and Over
+            </label>
+          </div>
+        </fieldset>
+      </form>
+
+      <br><hr/>
+      <form>
+        <fieldset class="form-group">
+          <legend class="booking-heading-fontcolor">Cuisine</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" checked="">
+              American
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Italian
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Mexican
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Seafood
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Greek
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Mediterranean
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Latin American
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="col col-md-9">
+      <hr/> <br>
+      <form class="row">
+        <div class="col col-md-4">
+          <img class="card-img-top" src="assets/restaurant_image1.jpeg">
+        </div>
+        <div class="col col-md-8">
+          <legend class="booking-heading-fontcolor">Piatti - Santa Clara</legend>
+          <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <span>Italian . Santa Clara</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">6:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:30 PM</button>
+          </div>
+          <span>Takeout</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-outline-primary divider"> <i class="fas fa-phone"></i> 408-330-9212</button>
+          </div>
+        </div>
+      </form>
+
+      <hr/> <br>
+      <form class="row">
+        <div class="col col-md-4">
+          <img class="card-img-top" src="assets/restaurant_image2.jpeg">
+        </div>
+        <div class="col col-md-8">
+          <legend class="booking-heading-fontcolor">Birk's</legend>
+          <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <span>American . Santa Clara</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">6:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:30 PM</button>
+          </div>
+          <span>Takeout</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-outline-primary divider"> <i class="fas fa-phone"></i> 408-980-6400</button>
+          </div>
+        </div>
+      </form>
+
+      <hr/> <br>
+      <form class="row">
+        <div class="col col-md-4">
+          <img class="card-img-top" src="assets/restaurant_image3.jpeg">
+        </div>
+        <div class="col col-md-8">
+          <legend class="booking-heading-fontcolor">Opa! Santa Clara</legend>
+          <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <span>Greek . Santa Clara</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">6:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:30 PM</button>
+          </div>
+          <span>Takeout</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-outline-primary divider"> <i class="fas fa-phone"></i> 408-790-9120</button>
+          </div>
+        </div>
+      </form>
+
+      <hr/> <br>
+      <form class="row">
+        <div class="col col-md-4">
+          <img class="card-img-top" src="assets/restaurant_image4.jpeg">
+        </div>
+        <div class="col col-md-8">
+          <legend class="booking-heading-fontcolor">Athena Grill</legend>
+          <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <span>Greek . Santa Clara</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">6:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">7:30 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:00 PM</button>
+            <button type="button" class="btn btn-primary divider waves-effect waves-light" (click)="goToSeatingType()" data-toggle="modal" data-target="#centralModalLg">8:30 PM</button>
+          </div>
+          <span>Takeout</span>
+          <div class="btn-toolbar">
+            <button type="button" class="btn btn-outline-primary divider"> <i class="fas fa-phone"></i> 408-567-9144</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+</div>
