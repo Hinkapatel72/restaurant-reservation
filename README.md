@@ -12,3 +12,6 @@ The Restaurant Reservation Platform helps you to discover and reserve a table wi
 
 # Reservation Detail
 ![Reservation detail Page](Restaurant_Reservation_website_images/Reservation_detail.png)
+
+# Booking Confirmation 
+![Booking Confirmation](Restaurant_Reservation_website_images/Booking_confirmation.png)
