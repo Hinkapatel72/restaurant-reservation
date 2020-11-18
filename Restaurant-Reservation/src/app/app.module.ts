@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BookingPageComponent } from './components/booking-page/booking-page.component';
 import { SeatingTypeComponent } from './components/seating-type/seating-type.component';
 import { CustomerDetailComponent } from './components/customer-detail/customer-detail.component';
+import { ConfirmedReservationComponent } from './components/confirmed-reservation/confirmed-reservation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CustomerDetailComponent } from './components/customer-detail/customer-d
     FooterComponent,
     BookingPageComponent,
     SeatingTypeComponent,
-    CustomerDetailComponent
+    CustomerDetailComponent,
+    ConfirmedReservationComponent
   ],
   imports: [
     BrowserModule,

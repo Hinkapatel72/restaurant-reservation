@@ -1,0 +1,18 @@
+.divider {
+  margin:10px;
+}
+
+.confirmation-heading-fontcolor {
+  color: #295940;
+}
+
+.confirmation-subheading-fontcolor {
+  color: #428a65;
+}
+
+.hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

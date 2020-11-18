@@ -4,6 +4,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { BookingPageComponent } from './components/booking-page/booking-page.component';
 import { SeatingTypeComponent } from './components/seating-type/seating-type.component';
 import { CustomerDetailComponent } from './components/customer-detail/customer-detail.component';
+import { ConfirmedReservationComponent } from './components/confirmed-reservation/confirmed-reservation.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'bookingPage', component: BookingPageComponent},
   { path: 'seatingTypePage', component: SeatingTypeComponent},
-  { path: 'CustomerDetailPage', component: CustomerDetailComponent}
+  { path: 'CustomerDetailPage', component: CustomerDetailComponent},
+  { path: 'ConfirmationPage', component: ConfirmedReservationComponent}
 ];
 
 @NgModule({
