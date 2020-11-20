@@ -10,6 +10,8 @@ import { BookingPageComponent } from './components/booking-page/booking-page.com
 import { SeatingTypeComponent } from './components/seating-type/seating-type.component';
 import { CustomerDetailComponent } from './components/customer-detail/customer-detail.component';
 import { ConfirmedReservationComponent } from './components/confirmed-reservation/confirmed-reservation.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ConfirmedReservationComponent } from './components/confirmed-reservatio
     BookingPageComponent,
     SeatingTypeComponent,
     CustomerDetailComponent,
-    ConfirmedReservationComponent
+    ConfirmedReservationComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

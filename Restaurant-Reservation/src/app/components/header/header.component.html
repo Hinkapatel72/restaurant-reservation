@@ -10,11 +10,14 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarColor03">
+  <ul class="collapse navbar-collapse" id="navbarColor03">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/home"><span class="menu-header">Sign In</span></a>
+        <a class="nav-link waves-effect waves-light" (click)="goToSignUpPage()" data-toggle="modal" data-target="#SignUpModel"><span class="menu-header">Sign Up</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light" (click)="goToSignInPage()" data-toggle="modal" data-target="#SignInModel"><span class="menu-header">Sign In</span></a>
       </li>
     </ul>
-  </div>
+  </ul>
 </nav>
