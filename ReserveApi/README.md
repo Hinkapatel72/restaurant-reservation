@@ -16,6 +16,8 @@ Get all users from user table
 #### /user/add 
 Add new user to the user table
 
+#### /user/login
+User Sign In endpoint
 
 ###Run Api
 python app.py

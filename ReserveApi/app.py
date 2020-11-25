@@ -24,6 +24,26 @@ def get():
               for i, value in enumerate(row)) for row in cur.fetchall()]
     return jsonify({'users': r})
 
+@app.route('/user/login', methods=['POST'])
+def login_user():
+    data = ast.literal_eval(json.dumps(request.get_json()))
+    email = data['email']
+    password = data['password']
+    print(email)
+    try:
+        conn = mysql.connect()
+        cur = conn.cursor()
+        query_string = "SELECT * FROM User WHERE Email = %s AND Password = %s"
+        cur.execute(query_string, (email, password, ))
+        data = cur.fetchall()
+        conn.commit()
+        conn.close()
+        for x in data:
+            return {"success": "true"}, 200
+    except Exception as e:
+        print(e)
+        return {"success": "false"}, 500
+    return {"success": "false"}, 500
 
 @app.route('/user/add', methods=['POST'])
 def add_user():
