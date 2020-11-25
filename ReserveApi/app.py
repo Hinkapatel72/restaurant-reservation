@@ -18,7 +18,6 @@ mysql.init_app(app)
 
 @app.route('/')
 def get():
-    print "enter"
     cur = mysql.connect().cursor()
     cur.execute('''select * from reservationdb.User''')
     r = [dict((cur.description[i][0], value)
@@ -41,7 +40,6 @@ def add_user():
         conn.close()
         return {"success": "true"}, 200
     except Exception as e:
-        print e
         return {"success": "false"}, 500
     return {"success": "false"}, 500
 
