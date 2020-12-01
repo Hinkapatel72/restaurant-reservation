@@ -10,29 +10,30 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form #userSignUp = "ngForm" (ngSubmit) = "onClickSignUp(userSignUp.value)" >
           <fieldset>
             <div class="form-group">
-              <input class="form-control" id="fname" placeholder="First Name">
+              <input class="form-control" id="fname" name="fname" placeholder="First Name" ngModel>
             </div>
             <div class="form-group">
-              <input class="form-control" id="lname" placeholder="Last Name">
+              <input class="form-control" id="lname" name="lname" placeholder="Last Name" ngModel>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" ngModel>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" id="Password" placeholder="Enter password">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" ngModel>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" id="Password" placeholder="Re-enter password">
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" ngModel>
             </div>
           </fieldset>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+          </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-lg">Create Account</button>
-      </div>
+
     </div>
   </div>
 </div>
