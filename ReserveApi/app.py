@@ -2,17 +2,15 @@ from flask import Flask, request, jsonify
 from flaskext.mysql import MySQL
 from flask_cors import CORS
 import json, ast
-
+from datetime import date
 app = Flask(__name__)
 CORS(app)
 mysql = MySQL()
-
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'admin'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'Awsadmin123'
 app.config['MYSQL_DATABASE_DB'] = 'reservationdb'
 app.config['MYSQL_DATABASE_HOST'] = 'itucsc-projectdb.c903mjlv0rah.us-west-1.rds.amazonaws.com'
-
 mysql.init_app(app)
 
 
@@ -62,6 +60,28 @@ def add_user():
     except Exception as e:
         return {"success": "false"}, 500
     return {"success": "false"}, 500
+
+@app.route('/user/reserve', methods=['POST'])
+def reserve():
+    data = ast.literal_eval(json.dumps(request.get_json()))
+    fname = data['fname']
+    lname = data['lname']
+    email = data['email']
+    phone = data['phone']
+    reason = data['occasion']
+    today = date.today()
+
+    try:
+        conn = mysql.connect()
+        cur = conn.cursor()
+        cur.execute("INSERT INTO Reservation(FirstName, LastName, Email, PhoneNumber, Reason, ReservedDate) VALUES (%s, %s, %s, %s, %s, %s)", (fname, lname, email, phone, reason, today))
+        conn.commit()
+        conn.close()
+        return {"success": "true"}, 200
+    except Exception as e:
+        return {"success": "false"}, 500
+    return {"success": "false"}, 500
+
 
 if __name__ == '__main__':
     app.run()
