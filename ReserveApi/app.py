@@ -3,6 +3,8 @@ from flaskext.mysql import MySQL
 from flask_cors import CORS
 import json, ast
 from datetime import date
+import smtplib
+
 app = Flask(__name__)
 CORS(app)
 mysql = MySQL()
@@ -70,7 +72,7 @@ def reserve():
     phone = data['phone']
     reason = data['occasion']
     today = date.today()
-
+    sendEmail(email)
     try:
         conn = mysql.connect()
         cur = conn.cursor()
@@ -81,6 +83,29 @@ def reserve():
     except Exception as e:
         return {"success": "false"}, 500
     return {"success": "false"}, 500
+
+def sendEmail(email):
+    # Python code to illustrate Sending mail from
+    # your Gmail account
+
+
+    # creates SMTP session
+    s = smtplib.SMTP('smtp.gmail.com', 587)
+
+    # start TLS for security
+    s.starttls()
+
+    # Authentication
+    s.login("reserveusapp@gmail.com", "ReserveUs123")
+
+    # message to be sent
+    message = "Hurrah!! We cant wait to treat your taste buds!"
+
+    # sending the mail
+    s.sendmail("reserveusapp@gmail.com",email, message)
+
+    # terminating the session
+    s.quit()
 
 
 if __name__ == '__main__':
